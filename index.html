@@ -1,0 +1,85 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Role of Finance in Society</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--bg:#eef6ff;--card:#fff;--tx:#23223a;--ac:#6c4ee0;--ac2:#19c3b1;--ok:#1e9e5a;--no:#e0457b;--soft:#e8e4ff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14122a;--card:#211f3d;--tx:#eceaff;--soft:#322d5c}}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.6 system-ui,Segoe UI,Tahoma,sans-serif;padding:12px;max-width:760px;margin:auto}
+h1{background:var(--ac);color:#fff;border-radius:16px;padding:14px;font-size:22px;text-align:center;margin:8px 0}
+h1 small{display:block;font-size:15px;opacity:.9}
+h2{color:var(--ac);font-size:19px;margin:22px 0 8px;border-bottom:3px solid var(--ac2);padding-bottom:4px}
+.c{background:var(--card);border-radius:14px;padding:12px 14px;margin:10px 0;box-shadow:0 2px 8px #0002;border-inline-start:6px solid var(--ac)}
+.c b{color:var(--ac)}.en{direction:ltr;text-align:left}
+.ar{direction:rtl;text-align:right;background:var(--soft);border-radius:10px;padding:8px 10px;margin-top:8px;font-size:17px}
+.ar:before{content:"🇪🇬 ";}
+.tip{background:var(--ac2);color:#222;border-radius:10px;padding:6px 10px;margin-top:8px;font-size:15px}
+.q{background:var(--card);border-radius:14px;padding:12px;margin:12px 0;box-shadow:0 2px 8px #0002}
+.q .n{color:var(--ac);font-weight:700}
+.o{display:block;width:100%;margin:6px 0;padding:10px;border:2px solid var(--ac);background:transparent;color:var(--tx);border-radius:12px;font-size:16px;cursor:pointer;text-align:left}
+.o span{display:block;direction:rtl;text-align:right;font-size:15px;opacity:.85}
+.o.ok{background:var(--ok);color:#fff;border-color:var(--ok)}.o.no{background:var(--no);color:#fff;border-color:var(--no)}
+.fb{margin-top:6px;font-weight:700;direction:rtl;text-align:right}
+#res{text-align:center;background:var(--ac);color:#fff;border-radius:16px;padding:16px;font-size:20px;margin:16px 0;display:none}
+#bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--card);border-radius:10px;padding:6px 12px;text-align:center;font-weight:700;z-index:5;box-shadow:0 2px 6px #0003}
+button.r{background:var(--ac2);border:0;border-radius:12px;padding:10px 18px;font-size:17px;font-weight:700;margin-top:10px}
+.pop{animation:p .4s}@keyframes p{50%{transform:scale(1.04)}}
+</style></head><body>
+<h1>🏦 Role of Finance in Society<small>دور التمويل في المجتمع — Basics of Money and Finance</small></h1>
+<div class="c en">Read each part in English 👆 then the Arabic explanation below it. After that, answer the 20 questions! 🎯<div class="ar">اقرأ كل جزء بالإنجليزي ثم الشرح العربي تحته، وبعدها جاوب على الأسئلة العشرين!</div></div>
+<div id="lesson"></div>
+<h2>📝 20 Interactive Questions / ٢٠ سؤالًا تفاعليًا</h2>
+<div id="bar">⭐ <span id="sc">0</span> / 20 &nbsp;|&nbsp; ✅ <span id="dn">0</span> answered</div>
+<div id="qs"></div><div id="res"></div>
+<script>
+const L=[
+["1. What Finance Is ✨","Finance is a system that moves money from people or organizations that have <b>surplus funds</b> to those who <b>need funds</b>. It has two kinds: direct finance and indirect finance.","التمويل هو نظام ينقل الأموال من الأشخاص أو المؤسسات التي لديها فائض إلى من يحتاجها. وله نوعان: تمويل مباشر وتمويل غير مباشر."],
+["(a) Direct Finance","<b>Direct Finance</b>: companies raise funds directly from investors by issuing stocks or bonds.<br><b>Stock</b>: a unit of ownership in a company, issued to raise money for the business.<br><b>Bond</b>: a certificate issued by a government or company to borrow money from investors.","التمويل المباشر: الشركات تجمع الأموال مباشرة من المستثمرين بإصدار أسهم أو سندات.<br>السهم: وحدة ملكية في الشركة تُصدر لجمع المال.<br>السند: شهادة تصدرها الحكومة أو الشركة لاقتراض المال من المستثمرين."],
+["(b) Indirect Finance","<b>Indirect Finance</b>: financial institutions collect funds from depositors and lend them to companies or individuals. Banks sometimes use deposits to buy stocks and bonds, but depositors do not buy them directly. Since the money goes through banks, it is indirect finance.","التمويل غير المباشر: المؤسسات المالية تجمع الأموال من المودعين وتُقرضها للشركات أو الأفراد. أحيانًا تشتري البنوك أسهمًا وسندات بالودائع، لكن المودعين لا يشترونها مباشرة؛ ولأن الأموال تمر عبر البنوك فهو تمويل غير مباشر."],
+["(c) Cost of Using Funds 💸","Using funds has costs or obligations: <b>interest</b>, fees, rent, a fixed amount added to the price of goods, and a share of profits paid to the provider. The percentage used to calculate interest is the <b>interest rate</b>. → Companies and individuals must consider the cost carefully.","استخدام الأموال له تكاليف والتزامات: الفائدة، الرسوم، الإيجار، مبلغ ثابت يُضاف لسعر السلعة، وحصة من الأرباح تُدفع لمقدم التمويل. والنسبة المستخدمة لحساب الفائدة تسمى سعر الفائدة. ← يجب التفكير جيدًا في التكلفة."],
+["Crowdfunding 👥","<b>Crowdfunding</b>: many people each give a small amount of money through the internet to support a business or project. Rules differ depending on how funds are raised and what providers get in return. In Egypt, it must follow applicable laws and regulations.","التمويل الجماعي: يقدم كثير من الناس مبلغًا صغيرًا عبر الإنترنت لدعم مشروع. تختلف القواعد حسب طريقة جمع الأموال وما يحصل عليه المموّلون. وفي مصر يجب أن يتم وفق القوانين واللوائح."],
+["2. Financial Institutions 🏢","<b>Financial Institutions</b> support the flow of funds by supplying, managing, and transferring money. They include banks, non-bank financial institutions, and postal service providers.","المؤسسات المالية تدعم تدفق الأموال بتوفيرها وإدارتها وتحويلها، وتشمل البنوك والمؤسسات المالية غير المصرفية ومقدمي الخدمات البريدية."],
+["(a) Banking Sector 🏦","<b>Commercial Banks</b>: people use deposits, withdrawals, and payments. They collect funds from depositors and lend to companies and individuals.<br><b>Central Bank</b>: issues banknotes, maintains price stability, and ensures the financial system is stable. Ordinary people cannot deposit with it; it deals with the government and commercial banks. In Egypt, this is the Central Bank of Egypt (CBE).","البنوك التجارية: يستخدمها الناس للإيداع والسحب والدفع، وتجمع الأموال من المودعين وتُقرضها للشركات والأفراد.<br>البنك المركزي: يصدر الأوراق النقدية ويحافظ على استقرار الأسعار والنظام المالي. لا يستطيع الأفراد الإيداع لديه؛ فهو يتعامل مع الحكومة والبنوك التجارية. وفي مصر هو البنك المركزي المصري."],
+["(b) Non-bank Institutions 🧾","They provide financial services without being banks, under authorization and supervision. In Egypt, the Financial Regulatory Authority (FRA) supervises them.<br><b>Securities Companies</b>: help buy and sell stocks and bonds and help companies raise funds.<br><b>Insurance Companies</b>: collect premiums and pay compensation for losses from risks like accidents and illness. Insurance does not remove risks; it prepares you for the losses.<br><b>Microfinance Institutions</b>: small loans and services for low-income people and others who struggle to reach banks; they help reduce poverty.","تقدم خدمات مالية دون أن تكون بنوكًا، بترخيص وإشراف. وفي مصر تشرف عليها الهيئة العامة للرقابة المالية.<br>شركات الأوراق المالية: تسهّل بيع وشراء الأسهم والسندات وتساعد الشركات على جمع الأموال.<br>شركات التأمين: تجمع الأقساط وتدفع تعويضًا عن الخسائر الناتجة عن مخاطر مثل الحوادث والمرض. التأمين لا يلغي المخاطر بل يجهّزك لخسائرها.<br>مؤسسات التمويل الأصغر: قروض صغيرة وخدمات للفقراء ومن يصعب عليهم التعامل مع البنوك، وتساهم في تقليل الفقر."],
+["(c) Postal Service Providers 📮","In some countries, postal providers offer financial services like savings, payments, money transfers, and insurance. In Egypt, Egypt Post provides authorized financial services. <i>Note: this is as of 2026; confirm the current system.</i>","في بعض الدول تقدم هيئات البريد خدمات مالية مثل الادخار والدفع وتحويل الأموال والتأمين. وفي مصر يقدم البريد المصري خدمات مالية مرخصة. ملحوظة: هذا الوصف حتى 2026، ويجب التأكد من النظام الحالي."],
+["3. Finance Moves Society 🔄","<b>Business Investment</b>: companies spend on factories, machinery, equipment, and technology to increase future production and profits.<br><b>Virtuous cycle:</b> ① more investment and jobs → ② higher wages → ③ more consumption → ④ higher profits and tax revenue → (support public services) and the cycle repeats.<br>But it is not automatic: if demand is weak or costs rise, profits may not increase.","الاستثمار التجاري: إنفاق الشركات على المصانع والآلات والمعدات والتكنولوجيا لزيادة الإنتاج والأرباح مستقبلًا.<br>الدورة الحميدة: ① زيادة الاستثمار والتوظيف ← ② زيادة الأجور ← ③ زيادة الاستهلاك ← ④ زيادة الأرباح والإيرادات الضريبية (وتدعم الخدمات العامة) ثم تتكرر الدورة.<br>لكنها لا تحدث تلقائيًا؛ فإذا ضعف الطلب أو ارتفعت التكاليف قد لا تزيد الأرباح."],
+["(b) Exclusion vs Inclusion 🔓","<b>Financial Exclusion</b>: people cannot access financial services because of economic, geographic, social, or digital factors.<br><b>Financial Inclusion</b>: everyone should have access to financial services.<br><b>FinTech</b>: digital technology that makes services (like phone payments) easier. It widens access and saves time, but fees, fraud, data risks, and outages may appear, and you need some digital literacy.","الاستبعاد المالي: عدم قدرة الناس على الوصول للخدمات المالية لأسباب اقتصادية أو جغرافية أو اجتماعية أو رقمية.<br>الشمول المالي: أن يحصل الجميع على الخدمات المالية.<br>التكنولوجيا المالية: استخدام التكنولوجيا الرقمية لتسهيل الخدمات مثل الدفع بالهاتف. توسّع الوصول وتوفر الوقت، لكن قد تظهر رسوم واحتيال ومخاطر بيانات وانقطاع الخدمة، وتحتاج لثقافة رقمية."],
+["(c) Gam’eya 🤝","<b>Gam’eya</b>: an informal Rotating Savings and Credit Association (ROSCA) based on trust. Members pay a fixed amount regularly and each receives the total in turn. Benefit: helps people who struggle to reach banks to save. Risk: it depends on trust, so some may stop paying and disputes may arise.","الجمعية: نظام ادخار وائتمان دوّار غير رسمي قائم على الثقة. يدفع المشاركون مبلغًا ثابتًا بانتظام ويستلم كل واحد المجموع بالدور. الفائدة: تساعد من يصعب عليهم التعامل مع البنوك على الادخار. الخطر: تعتمد على الثقة فقد يتوقف البعض عن الدفع وتحدث خلافات."]
+];
+document.getElementById('lesson').innerHTML=L.map(p=>`<h2>${p[0]}</h2><div class="c"><div class="en">${p[1]}</div><div class="ar">${p[2]}</div></div>`).join('');
+const T=["True","False"],TA=["صح","غلط"];
+// [en, ar, optsEn, optsAr, answerIdx, why(ar)]
+const Q=[
+["Finance transfers funds from those with surplus funds to those who need funds.","التمويل ينقل الأموال من أصحاب الفائض إلى من يحتاجها.",T,TA,0,"صح، هذا هو تعريف التمويل."],
+["Which is a certificate issued to borrow money from investors?","أي مما يلي شهادة تُصدر لاقتراض المال من المستثمرين؟",["Stock","Bond","Interest","Premium"],["سهم","سند","فائدة","قسط"],1,"السند (Bond)."],
+["In direct finance, depositors lend money through banks.","في التمويل المباشر يُقرض المودعون الأموال عبر البنوك.",T,TA,1,"غلط، هذا هو التمويل غير المباشر."],
+["A stock is a unit of ownership in a company.","السهم وحدة ملكية في الشركة.",T,TA,0,"صح."],
+["The percentage used to calculate interest is called:","النسبة المستخدمة لحساب الفائدة تسمى:",["Premium","Fee","Interest rate","Rent"],["قسط","رسم","سعر الفائدة","إيجار"],2,"سعر الفائدة."],
+["In crowdfunding, many people each give a small amount through the internet.","في التمويل الجماعي يقدم كثيرون مبالغ صغيرة عبر الإنترنت.",T,TA,0,"صح."],
+["Which bank issues banknotes and maintains price stability?","أي بنك يصدر الأوراق النقدية ويحافظ على استقرار الأسعار؟",["Commercial bank","Central bank","Microfinance","Postal bank"],["بنك تجاري","بنك مركزي","تمويل أصغر","بنك بريدي"],1,"البنك المركزي."],
+["Ordinary people can deposit money with the central bank.","يستطيع الأفراد العاديون إيداع أموالهم في البنك المركزي.",T,TA,1,"غلط، يتعامل مع الحكومة والبنوك التجارية."],
+["In Egypt, non-bank financial markets are supervised by:","في مصر تشرف على الأسواق المالية غير المصرفية:",["CBE","Egypt Post","FRA","A commercial bank"],["البنك المركزي المصري","البريد المصري","هيئة الرقابة المالية","بنك تجاري"],2,"الهيئة العامة للرقابة المالية (FRA)."],
+["Securities companies help buy and sell stocks and bonds.","شركات الأوراق المالية تسهّل بيع وشراء الأسهم والسندات.",T,TA,0,"صح."],
+["Which institution collects premiums and pays compensation for losses?","أي مؤسسة تجمع الأقساط وتدفع تعويضًا عن الخسائر؟",["Insurance company","Securities company","Central bank","Gam’eya"],["شركة تأمين","شركة أوراق مالية","بنك مركزي","جمعية"],0,"شركة التأمين."],
+["Insurance eliminates the risks themselves.","التأمين يلغي المخاطر نفسها.",T,TA,1,"غلط، هو نظام للاستعداد لخسائر المخاطر."],
+["Microfinance institutions serve:","تخدم مؤسسات التمويل الأصغر:",["Only large companies","Low-income people who have difficulty accessing banks","Only governments","Only stock investors"],["الشركات الكبيرة فقط","محدودي الدخل ومن يصعب عليهم التعامل مع البنوك","الحكومات فقط","مستثمري الأسهم فقط"],1,"محدودو الدخل."],
+["Which provides authorized financial services in Egypt in addition to postal services?","أي جهة تقدم خدمات مالية مرخصة في مصر بجانب الخدمات البريدية؟",["FRA","CBE","Egypt Post","A securities company"],["الرقابة المالية","البنك المركزي","البريد المصري","شركة أوراق مالية"],2,"البريد المصري."],
+["Business investment means companies spending on factories, machinery, and technology.","الاستثمار التجاري هو إنفاق الشركات على المصانع والآلات والتكنولوجيا.",T,TA,0,"صح."],
+["In the virtuous cycle, an increase in investment and employment leads to:","في الدورة الحميدة تؤدي زيادة الاستثمار والتوظيف إلى:",["Lower wages","Increase in wages","Less consumption","Lower profits"],["انخفاض الأجور","زيادة الأجور","قلة الاستهلاك","انخفاض الأرباح"],1,"زيادة الأجور."],
+["The virtuous cycle always happens automatically.","الدورة الحميدة تحدث دائمًا تلقائيًا.",T,TA,1,"غلط، تعتمد على الطلب والتكاليف وغيرها."],
+["Financial exclusion means:","الاستبعاد المالي يعني:",["Everyone can use financial services","People cannot access financial services","Using smartphones only","Investing in stocks"],["الجميع يستخدم الخدمات المالية","عدم قدرة الناس على الوصول للخدمات المالية","استخدام الهواتف فقط","الاستثمار في الأسهم"],1,"عدم القدرة على الوصول للخدمات."],
+["FinTech is the use of digital technology to make financial services more convenient.","التكنولوجيا المالية هي استخدام التقنية الرقمية لجعل الخدمات المالية أكثر راحة.",T,TA,0,"صح."],
+["A Gam’eya is based on:","الجمعية تقوم على:",["Bank contracts","Trust among participants","Stock ownership","Interest rates"],["عقود بنكية","الثقة بين المشاركين","ملكية الأسهم","أسعار الفائدة"],1,"الثقة بين المشاركين."]
+];
+let sc=0,dn=0;const AC=new (window.AudioContext||window.webkitAudioContext)();
+function snd(ok){try{const o=AC.createOscillator(),g=AC.createGain();o.connect(g);g.connect(AC.destination);o.frequency.value=ok?660:180;o.type=ok?'sine':'sawtooth';g.gain.value=.15;o.start();if(ok)o.frequency.setValueAtTime(880,AC.currentTime+.12);o.stop(AC.currentTime+.3)}catch(e){}}
+const qs=document.getElementById('qs');
+Q.forEach((q,i)=>{const d=document.createElement('div');d.className='q';
+d.innerHTML=`<div class="n">Q${i+1} / س${i+1}</div><div>${q[0]}</div><div class="ar">${q[1]}</div>`+q[2].map((o,j)=>`<button class="o" data-j="${j}">${'abcd'[j]}) ${o}<span>${q[3][j]}</span></button>`).join('')+'<div class="fb"></div>';
+d.querySelectorAll('.o').forEach(b=>b.onclick=()=>{if(d.dataset.done)return;d.dataset.done=1;const j=+b.dataset.j,ok=j==q[4];
+b.classList.add(ok?'ok':'no');if(!ok)d.querySelectorAll('.o')[q[4]].classList.add('ok');
+d.classList.add('pop');snd(ok);if(ok)sc++;dn++;
+d.querySelector('.fb').textContent=(ok?'🎉 ممتاز! ':'😢 حاول مرة أخرى! ')+q[5];
+document.getElementById('sc').textContent=sc;document.getElementById('dn').textContent=dn;
+if(dn==20){const r=document.getElementById('res');r.style.display='block';r.innerHTML=(sc>=16?'🏆':sc>=10?'👏':'💪')+` Your score: ${sc}/20<br>درجتك: ${sc} من 20<br><button class="r" onclick="location.reload()">🔁 Try again / أعد المحاولة</button>`;r.scrollIntoView({behavior:'smooth'})}});
+qs.appendChild(d)});
+</script></body></html>
